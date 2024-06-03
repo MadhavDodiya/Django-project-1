@@ -38,8 +38,11 @@ def table(request):
                         </center>''')
 
 def form(request):
-    return HttpResponse('''<form style="background-image: linear-gradient(to right,pink,blue)">
-                        <div style="background-color:black;border-radius: 10px;height: 500px;width: 500px">
+    return HttpResponse('''<form style="background-image: linear-gradient(to right,pink,blue);padding: 200px">
+                        <center>
+                        <div style="background-color:black;border-radius: 10px;height: 500px;width: 500px;background-image: liner-gradient(to pink,blue)">
                             <h2 style="color: white;padding: 10px 0px;text-align: center">Contact Us<h2>
+                            
                         </div>
+                        </center>
                         </form>''')

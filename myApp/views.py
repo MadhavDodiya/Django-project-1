@@ -38,11 +38,31 @@ def table(request):
                         </center>''')
 
 def form(request):
-    return HttpResponse('''<form style="background-image: linear-gradient(to right,pink,blue);padding: 200px">
-                        <center>
-                        <div style="background-color:black;border-radius: 10px;height: 500px;width: 500px;background-image: liner-gradient(to pink,blue)">
-                            <h2 style="color: white;padding: 10px 0px;text-align: center">Contact Us<h2>
-                            
-                        </div>
-                        </center>
-                        </form>''')
+    return HttpResponse('''<body style="display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(to bottom right, #e20078, #7b22ff);">
+    <div style="background-color: #1c1c1c; padding: 30px; border-radius: 10px; width: 400px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+        <h2 style="color: white; text-align: center; margin-bottom: 20px;">Contact Us</h2>
+        <form>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                <div style="flex: 0.48;">
+                    <label for="first-name" style="color: white; display: block; margin-bottom: 5px;">Full name <span style="color: red;">*</span></label>
+                    <input type="text" id="first-name" placeholder="First" required style="width: 90%; padding: 10px; border-radius: 5px; border: none;">
+                </div>
+                <div style="flex: 0.48;">
+                    <label for="last-name" style="color: white; display: block; margin-bottom: 5px;">&nbsp;</label>
+                    <input type="text" id="last-name" placeholder="Last" required style="width: 90%; padding: 10px; border-radius: 5px; border: none;">
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="color: white; display: block; margin-bottom: 5px;">Email <span style="color: red;">*</span></label>
+                <input type="email" id="email" required style="width: 95%; padding: 10px; border-radius: 5px; border: none;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="message" style="color: white; display: block; margin-bottom: 5px;">Leave us a few words <span style="color: red;">*</span></label>
+                <textarea id="message" rows="5" style="width: 95%; padding: 10px; border-radius: 5px; border: none;"></textarea>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" style="background-color: #ff0059; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>''')
